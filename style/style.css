@@ -24,19 +24,23 @@ header {
 
 .header {
   grid-area: header;
-  background-color: #000000;
+  background-color: #12b3aa;
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
   height: 50px;
   width: 100%;
+  text-align: center;
+  line-height: 2rem;
 }
 .header .header_logo {
-  background-color: #000000;
+  background-color: #12b3aa;
   width: 80%;
-  color: white;
+  color: #3a3a3a;
   text-align: center;
   margin: 0 auto;
+  line-height: 2.5rem;
+  font-size: 3rem;
 }
 .header .header_container {
   background-color: red;
@@ -55,7 +59,7 @@ header {
   background-color: #12b3aa;
   width: 100%;
   text-align: center;
-  color: #404040;
+  color: #131212;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -70,7 +74,7 @@ header {
 .header .header_box {
   display: none;
   padding: 15%;
-  background-color: #404040;
+  background-color: #3a3a3a;
   width: 130%;
   text-align: center;
   color: white;

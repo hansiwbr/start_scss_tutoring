@@ -49,19 +49,23 @@ header
     .header
     {
         grid-area: header;
-        background-color: $prime_bg_color;
+        background-color: $sec_bg_color;
         display: flex;
         margin: 0 auto;
         justify-content: space-between;
         height: 50px;
         width: 100%;
+        text-align: center;
+        line-height: 2rem;
         .header_logo
         {
-            background-color: $prime_bg_color;
+            background-color: $sec_bg_color;
             width: 80%;
-            color: white;
+            color: $prime_bg_color;
             text-align: center;
             margin: 0 auto;
+            line-height: 2.5rem;
+            font-size: 3rem;
         }
 
         .header_container
@@ -109,7 +113,7 @@ header
         {
             display: none;
             padding: 15%;
-            background-color:$font_color;
+            background-color:$prime_bg_color;
             width: 130%;
             text-align: center;
             color: white;
