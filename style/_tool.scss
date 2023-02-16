@@ -1,0 +1,27 @@
+@use "./vari.scss" as *;
+
+
+@mixin nav_points 
+{
+    .nav_list
+    {
+        text-align: center;
+        display: block;
+        width: 10rem;
+        height: 3rem;
+        background-color: $sec_bg_color;
+        
+        a 
+        {
+            text-decoration: none;
+            line-height: 3rem;
+            color: $font_color;
+        }
+        
+    }
+    .nav_list:hover 
+        {
+            transition: transform 400ms ease-out;
+            background-color: $prime_bg_color;
+        }
+}

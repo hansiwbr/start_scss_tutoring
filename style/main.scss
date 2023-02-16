@@ -1,0 +1,401 @@
+@use "./vari.scss" as *;
+@use "./tool.scss" as *;
+
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header
+    {
+        z-index: 999;
+        position: relative;
+    }
+
+    .body
+    {
+        z-index: -1;
+        width: 100%;
+        
+        display: grid;
+        grid-template-columns:  
+        1fr 1fr 1fr 1fr;
+        grid-template-rows: 
+        
+        2fr
+        1fr
+        1fr
+        1fr
+        1fr
+        1fr
+        0.2fr;
+
+        grid-template-areas: 
+        
+        "jumbobild jumbobild jumbobild jumbobild"
+        "main main main main"
+        "main main main main"
+        "main main main main"
+        "content content content content"
+        "content content content content"
+        "footer footer footer footer";
+    }
+    .header_desktop
+    {
+        display: none;
+    }
+    .header
+    {
+        grid-area: header;
+        background-color: $prime_bg_color;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        height: 50px;
+        width: 100%;
+        .header_logo
+        {
+            background-color: $prime_bg_color;
+            width: 80%;
+            color: white;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .header_container
+        {
+            background-color: red;
+            width: 20%;
+            display: flex;
+            justify-content: flex-start;
+            a
+            {
+                text-decoration: none;
+                color: white;
+                border-left: 2px solid red;
+                padding: 5%;
+            }
+
+        }
+        .header_menu
+        {
+            
+            
+            padding: 10%;
+            background-color: $sec_bg_color;
+            width: 100%;
+        
+            text-align: center;
+            color: $font_color;
+            display: flex ;
+            flex-direction: column;
+            justify-content: flex-start;
+            &:hover .header_box
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                position: relative;
+                right: 12%;
+    
+
+            }
+    
+        
+        }
+        .header_box 
+        {
+            display: none;
+            padding: 15%;
+            background-color:$font_color;
+            width: 130%;
+            text-align: center;
+            color: white;
+            
+            & a
+            {
+                text-decoration: none;
+                color: $sec_bg_color;
+                border-left: 2px solid $sec_bg_color;
+                padding: 5%;
+                transition-property: color , border-left;
+                transition-duration: 200ms;
+                transition-timing-function: ease-in-out;
+                
+                &:hover
+                {
+                    
+                    color: $font_colortwo;
+                    border-left: 2px solid $font_colortwo;
+                    
+                    
+                }
+               
+            }
+    
+        
+
+        
+        }
+    }
+
+    
+    .one
+    {
+        margin-top: 20px;
+    }
+
+
+
+    .main
+    {
+        grid-area: main;
+        background-color: aliceblue;
+        display: inline-block;
+        width: 99%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        .main_box 
+        {
+            
+            margin-bottom: 20px;
+            width: 95%;
+        }
+        
+    
+    }
+
+
+    
+ 
+    .main_box p 
+    {
+       width: 95%;
+       margin-left: 10px;
+    }
+
+    .content
+    {
+        grid-area: content;
+        width: 99%;
+        background-color: rgb(255, 52, 52);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .content_box 
+    {
+
+        margin-bottom: 10px;
+        width: 95%;
+    
+    }
+
+    .content_box p 
+    {
+        width: 95%;
+        margin-left: 10px;
+    }
+
+    .footer
+    {
+        grid-area: footer;
+        background-color: gray;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .bild
+    {
+        
+        width: 100vw;
+        height: 40vh;
+        background-image: url(../bilder/267163.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+
+    }
+
+
+
+@media (min-width: 1201px)
+{
+
+
+
+
+
+
+    .body
+    {
+       
+        width: 100%; 
+        display: grid;
+        grid-template-columns:  
+        1fr 1fr 1fr 1fr;
+        grid-template-rows: 
+        
+        2fr
+        1fr
+        1fr
+        1fr
+        1fr
+        1fr
+        0.2fr;
+
+        grid-template-areas: 
+        
+        "jumbobild jumbobild jumbobild jumbobild"
+        "main main main main"
+        "main main main main"
+        "main main main main"
+        "content content content content"
+        "content content content content"
+        "footer footer footer footer";
+    }
+
+    .header{
+        display: none;
+    }
+
+    .header_desktop
+    {
+        width: 100vw;
+        height: 4rem;
+        display: grid;
+        grid-template-columns: 
+        4fr 1fr 1fr 1fr 1fr;
+        position: fixed;
+
+    }
+
+    .header_desktop_logo, .header_desktop_box 
+    {
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .header_desktop_logo
+    {
+        background-color: rgb(71, 71, 71);
+        width: 100%;
+        color: white;
+        font-size: 2rem;
+        
+    }
+
+    .header_desktop_box
+    {
+        background-color: rgb(255, 0, 0);
+        width: 100%;
+    }
+    
+    .header_desktop_box a 
+    {
+        text-decoration: none;
+        color: white;
+        border-left: 2px solid rgb(71, 71, 71);
+        padding-left: 1rem;
+        font-size: larger;
+    }
+
+    .header_desktop_box a:hover
+    {
+        font-size: xx-large;
+        color: rgb(209, 209, 209);
+    }
+   
+
+    .jumbobild
+    {
+        margin-top: 4rem;
+    }
+
+
+    .main
+    {
+        grid-area: main;
+        background-color: aliceblue;
+        display: inline-block;
+        width: 99%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+    
+    }
+
+    .main_box 
+    {
+        
+        margin-bottom: 20px;
+        width: 95%;
+    }
+
+    
+ 
+    .main_box p 
+    {
+       width: 95%;
+       margin-left: 10px;
+    }
+
+    .content
+    {
+        grid-area: content;
+        width: 99%;
+        background-color: rgb(255, 52, 52);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .content_box 
+    {
+
+        margin-bottom: 10px;
+        width: 95%;
+    
+    }
+
+    .content_box p 
+    {
+        width: 95%;
+        margin-left: 10px;
+    }
+
+    .footer
+    {
+        grid-area: footer;
+        background-color: gray;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .bild
+    {
+        height: 50vh;
+        width: 100vw;
+        background-image: url(../bilder/267163.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-color: rosybrown;
+    }
+
+}
+
