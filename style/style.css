@@ -23,8 +23,10 @@ header {
 }
 
 .header {
+  position: fixed;
   grid-area: header;
   background-color: #12b3aa;
+  opacity: 98%;
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
@@ -43,7 +45,6 @@ header {
   font-size: 3rem;
 }
 .header .header_container {
-  background-color: red;
   width: 20%;
   display: flex;
   justify-content: flex-start;
@@ -95,6 +96,12 @@ header {
 
 .one {
   margin-top: 20px;
+}
+
+.header_hack {
+  height: 50px;
+  background-color: #12b3aa;
+  width: 100vw;
 }
 
 .main {
@@ -155,7 +162,7 @@ header {
   background-position-y: center;
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 1000px) {
   .body {
     width: 100%;
     display: grid;
@@ -170,34 +177,44 @@ header {
     width: 100vw;
     height: 4rem;
     display: grid;
-    grid-template-columns: 4fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
     position: fixed;
+    top: 0;
+    opacity: 98%;
   }
-  .header_desktop_logo, .header_desktop_box {
+  .header_desktop .header_desktop_logo, .header_desktop .header_desktop_box {
     margin: 0 auto;
     text-align: center;
     padding-top: 20px;
   }
-  .header_desktop_logo {
+  .header_desktop .header_desktop_logo {
     background-color: rgb(71, 71, 71);
     width: 100%;
     color: white;
     font-size: 2rem;
   }
-  .header_desktop_box {
-    background-color: rgb(255, 0, 0);
+  .header_desktop .header_desktop_logo {
+    background-color: #12b3aa;
+  }
+  .header_desktop .header_desktop_box {
+    background-color: #3a3a3a;
     width: 100%;
   }
-  .header_desktop_box a {
+  .header_desktop .header_desktop_box a {
     text-decoration: none;
-    color: white;
-    border-left: 2px solid rgb(71, 71, 71);
-    padding-left: 1rem;
-    font-size: larger;
+    color: #12b3aa;
+    border-left: 2px solid #12b3aa;
+    padding: 5%;
+    transition-property: color, border-left;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
   }
-  .header_desktop_box a:hover {
-    font-size: xx-large;
-    color: rgb(209, 209, 209);
+  .header_desktop .header_desktop_box a:hover {
+    color: #fafafa;
+    border-left: 2px solid #fafafa;
+  }
+  .header_hack {
+    display: none;
   }
   .jumbobild {
     margin-top: 4rem;

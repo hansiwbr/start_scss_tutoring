@@ -1,27 +1,26 @@
 @use "./vari.scss" as *;
 
 
-@mixin nav_points 
+@mixin nav_box_hover 
 {
-    .nav_list
-    {
-        text-align: center;
-        display: block;
-        width: 10rem;
-        height: 3rem;
-        background-color: $sec_bg_color;
-        
-        a 
-        {
-            text-decoration: none;
-            line-height: 3rem;
-            color: $font_color;
-        }
-        
-    }
-    .nav_list:hover 
-        {
-            transition: transform 400ms ease-out;
-            background-color: $prime_bg_color;
-        }
+    & a
+            {
+                text-decoration: none;
+                color: $sec_bg_color;
+                border-left: 2px solid $sec_bg_color;
+                padding: 5%;
+                transition-property: color , border-left;
+                transition-duration: 200ms;
+                transition-timing-function: ease-in-out;
+                
+                &:hover
+                {
+                    
+                    color: $font_colortwo;
+                    border-left: 2px solid $font_colortwo;
+                    
+                    
+                }
+               
+            }
 }

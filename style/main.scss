@@ -48,8 +48,10 @@ header
     }
     .header
     {
+        position: fixed;
         grid-area: header;
         background-color: $sec_bg_color;
+        opacity: 98%;
         display: flex;
         margin: 0 auto;
         justify-content: space-between;
@@ -70,7 +72,7 @@ header
 
         .header_container
         {
-            background-color: red;
+            
             width: 20%;
             display: flex;
             justify-content: flex-start;
@@ -114,30 +116,12 @@ header
             display: none;
             padding: 15%;
             background-color:$prime_bg_color;
+            
             width: 130%;
             text-align: center;
             color: white;
             
-            & a
-            {
-                text-decoration: none;
-                color: $sec_bg_color;
-                border-left: 2px solid $sec_bg_color;
-                padding: 5%;
-                transition-property: color , border-left;
-                transition-duration: 200ms;
-                transition-timing-function: ease-in-out;
-                
-                &:hover
-                {
-                    
-                    color: $font_colortwo;
-                    border-left: 2px solid $font_colortwo;
-                    
-                    
-                }
-               
-            }
+            @include nav_box_hover;
     
         
 
@@ -151,7 +135,12 @@ header
         margin-top: 20px;
     }
 
-
+    .header_hack
+    {
+        height: 50px;
+        background-color: $sec_bg_color;
+        width: 100vw;
+    }
 
     .main
     {
@@ -231,7 +220,7 @@ header
 
 
 
-@media (min-width: 1201px)
+@media (min-width: 1000px)
 {
 
 
@@ -277,49 +266,52 @@ header
         height: 4rem;
         display: grid;
         grid-template-columns: 
-        4fr 1fr 1fr 1fr 1fr;
+        3fr 1fr 1fr 1fr 1fr;
         position: fixed;
-
-    }
-
-    .header_desktop_logo, .header_desktop_box 
-    {
-        margin: 0 auto;
-        text-align: center;
-        padding-top: 20px;
-    }
-
-    .header_desktop_logo
-    {
-        background-color: rgb(71, 71, 71);
-        width: 100%;
-        color: white;
-        font-size: 2rem;
+        top: 0;
+        opacity: 98%;
+        .header_desktop_logo, .header_desktop_box 
+        {
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 20px;
+        }
         
-    }
+        .header_desktop_logo
+        {
+            background-color: rgb(71, 71, 71);
+            width: 100%;
+            color: white;
+            font-size: 2rem;
+        
+        }
+        .header_desktop_logo
+        {
+            background-color: $sec_bg_color;
+        }
+        .header_desktop_box
+        {
+            background-color: $prime_bg_color;
+            width: 100%;
+            @include nav_box_hover;
+        }
 
-    .header_desktop_box
-    {
-        background-color: rgb(255, 0, 0);
-        width: 100%;
-    }
-    
-    .header_desktop_box a 
-    {
-        text-decoration: none;
-        color: white;
-        border-left: 2px solid rgb(71, 71, 71);
-        padding-left: 1rem;
-        font-size: larger;
-    }
-
-    .header_desktop_box a:hover
-    {
-        font-size: xx-large;
-        color: rgb(209, 209, 209);
     }
    
 
+
+  
+
+    
+    
+  
+
+
+   
+    .header_hack
+    {
+        display: none;
+    }
     .jumbobild
     {
         margin-top: 4rem;
