@@ -22,15 +22,15 @@ header
         display: grid;
         grid-template-columns:  
         1fr 1fr 1fr 1fr;
-        grid-template-rows: 
+        // grid-template-rows: 
         
-        2fr
-        1fr
-        1fr
-        1fr
-        1fr
-        1fr
-        0.2fr;
+        // 2fr
+        // 1fr
+        // 1fr
+        // 1fr
+        // 1fr
+        // 1fr
+        // 0.2fr;
 
         grid-template-areas: 
         
@@ -145,17 +145,23 @@ header
     .main
     {
         grid-area: main;
-        background-color: aliceblue;
+        background-color: $prime_bg_color;
         display: inline-block;
         width: 99%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        & :nth-child(even)
+            {
+                background-color: $font_colortwo;
+            }
         .main_box 
         {
             
             margin-bottom: 20px;
-            width: 95%;
+            width: 99%;
+            padding-right: 30px;
+            
         }
         
     
@@ -166,7 +172,7 @@ header
  
     .main_box p 
     {
-       width: 95%;
+       width: 99%;
        margin-left: 10px;
     }
 
@@ -174,30 +180,35 @@ header
     {
         grid-area: content;
         width: 99%;
-        background-color: rgb(255, 52, 52);
+        background-color: $prime_bg_color;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        & :nth-child(even)
+            {
+                background-color: $font_colortwo;
+            }
     }
 
     .content_box 
     {
 
         margin-bottom: 10px;
-        width: 95%;
+        width: 100%;
+        padding-right: 30px;
     
     }
 
     .content_box p 
     {
-        width: 95%;
+        width: 99%;
         margin-left: 10px;
     }
 
     .footer
     {
         grid-area: footer;
-        background-color: gray;
+        background-color: $prime_bg_color;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
